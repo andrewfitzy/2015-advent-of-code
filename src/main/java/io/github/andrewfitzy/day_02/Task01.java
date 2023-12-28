@@ -13,21 +13,20 @@ public class Task01 {
 
     public int solve() {
         int totalPaper = 0;
-                for(String content : fileContent) {
-                    String[] lwh = content.split("x", -1);
+        for (String content : fileContent) {
+            String[] lwh = content.split("x", -1);
 
-                    int length = Integer.parseInt(lwh[0]);
-                    int width = Integer.parseInt(lwh[1]);
-                    int height = Integer.parseInt(lwh[2]);
-                    int lw = length * width;
-                    int wh = width * height;
-                    int lh = length * height;
+            int length = Integer.parseInt(lwh[0]);
+            int width = Integer.parseInt(lwh[1]);
+            int height = Integer.parseInt(lwh[2]);
+            int lw = length * width;
+            int wh = width * height;
+            int lh = length * height;
 
-                    int smallestSide = getSmallestSide(lw, wh, lh);
+            int smallestSide = getSmallestSide(lw, wh, lh);
 
-                    totalPaper = totalPaper + (2 * lw) + (2 * wh) + (2 * lh) + smallestSide;
-
-                }
+            totalPaper = totalPaper + (2 * lw) + (2 * wh) + (2 * lh) + smallestSide;
+        }
         return totalPaper;
     }
 

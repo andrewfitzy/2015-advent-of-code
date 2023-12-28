@@ -1,14 +1,13 @@
 /* (C)2022 */
 package io.github.andrewfitzy.day_04;
 
-import io.github.andrewfitzy.TaskInputReader;
-import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
+import io.github.andrewfitzy.TaskInputReader;
 import java.security.NoSuchAlgorithmException;
 import java.util.Arrays;
 import java.util.List;
-
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import org.junit.jupiter.api.Test;
 
 public class TestTask02 {
 
@@ -34,9 +33,8 @@ public class TestTask02 {
     void testSolveWithRealData() throws NoSuchAlgorithmException {
         List<String> fileContent = TaskInputReader.getFileContent("./day_04/task01_input.txt");
 
-
-            Task02 task02 = new Task02(fileContent);
-            int result = task02.solve();
+        Task02 task02 = new Task02(fileContent);
+        int result = task02.solve();
 
         assertEquals(3938038, result);
     }

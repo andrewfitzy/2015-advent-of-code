@@ -4,7 +4,6 @@ package io.github.andrewfitzy.day_01;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import io.github.andrewfitzy.TaskInputReader;
-
 import java.util.Arrays;
 import java.util.List;
 import org.junit.jupiter.api.Test;

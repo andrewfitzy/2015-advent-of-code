@@ -4,7 +4,6 @@ package io.github.andrewfitzy.day_03;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import io.github.andrewfitzy.TaskInputReader;
-
 import java.util.Arrays;
 import java.util.List;
 import org.junit.jupiter.api.Test;
@@ -42,10 +41,8 @@ public class TestTask01 {
     void testSolveWithRealData() {
         List<String> fileContent = TaskInputReader.getFileContent("./day_03/task01_input.txt");
 
-
-            Task01 task01 = new Task01(fileContent);
-            int result = task01.solve();
-
+        Task01 task01 = new Task01(fileContent);
+        int result = task01.solve();
 
         assertEquals(2081, result);
     }

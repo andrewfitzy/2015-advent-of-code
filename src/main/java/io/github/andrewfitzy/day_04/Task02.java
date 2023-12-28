@@ -16,28 +16,28 @@ public class Task02 {
     public int solve() throws NoSuchAlgorithmException {
         int result = 0;
         MessageDigest md = MessageDigest.getInstance("MD5");
-        for(int i = 0;i < 10000000;i++) {
+        for (int i = 0; i < 10000000; i++) {
 
-            String test = fileContent.get(0) + String.format("%04d", i);md.update(test.getBytes());
+            String test = fileContent.get(0) + String.format("%04d", i);
+            md.update(test.getBytes());
             byte[] digest = md.digest();
 
             StringBuffer stringBuffer = new StringBuffer();
             for (int j = 0; j < digest.length; j++) {
-                stringBuffer.append(Integer.toString((digest[j] & 0xff) + 0x100, 16)
-                        .substring(1));
+                stringBuffer.append(
+                        Integer.toString((digest[j] & 0xff) + 0x100, 16).substring(1));
             }
             boolean startsWith0s = Boolean.TRUE;
             for (int j = 0; j < 6; j++) {
-                if(!Character.valueOf(stringBuffer.charAt(j)).equals('0')) {
+                if (!Character.valueOf(stringBuffer.charAt(j)).equals('0')) {
                     startsWith0s = Boolean.FALSE;
                     break;
                 }
             }
-            if(startsWith0s) {
+            if (startsWith0s) {
                 result = i;
                 break;
             }
-
         }
         return result;
     }

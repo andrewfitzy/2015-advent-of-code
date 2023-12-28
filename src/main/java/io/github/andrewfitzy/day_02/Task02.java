@@ -13,7 +13,7 @@ public class Task02 {
 
     public int solve() {
         int totalRibbon = 0;
-        for(String content : fileContent) {
+        for (String content : fileContent) {
             String[] lwh = content.split("x", -1);
 
             int length = Integer.parseInt(lwh[0]);

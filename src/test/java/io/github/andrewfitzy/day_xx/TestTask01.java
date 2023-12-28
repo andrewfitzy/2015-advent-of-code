@@ -1,13 +1,12 @@
 /* (C)2022 */
 package io.github.andrewfitzy.day_xx;
 
-import io.github.andrewfitzy.TaskInputReader;
-import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
+import io.github.andrewfitzy.TaskInputReader;
 import java.util.Arrays;
 import java.util.List;
-
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import org.junit.jupiter.api.Test;
 
 public class TestTask01 {
 
@@ -24,10 +23,8 @@ public class TestTask01 {
     void demoTestMethod_02() {
         List<String> fileContent = TaskInputReader.getFileContent("./day_xx/task01_input.txt");
 
-
-           Task01 task01 = new Task01(fileContent);
-            int result = task01.solve();
-
+        Task01 task01 = new Task01(fileContent);
+        int result = task01.solve();
 
         assertEquals(0, result);
     }

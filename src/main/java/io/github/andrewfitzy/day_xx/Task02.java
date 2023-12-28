@@ -1,7 +1,6 @@
 /* (C)2022 */
 package io.github.andrewfitzy.day_xx;
 
-
 import java.util.List;
 
 public class Task02 {

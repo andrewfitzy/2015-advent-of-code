@@ -1,24 +1,29 @@
 /* (C)2022 */
 package io.github.andrewfitzy.day_02;
 
+import java.util.List;
+
 public class Task02 {
 
-    private final String input;
+    private final List<String> fileContent;
 
-    public Task02(final String input) {
-        this.input = input;
+    public Task02(final List<String> fileContent) {
+        this.fileContent = fileContent;
     }
 
     public int solve() {
-        String[] lwh = input.split("x", -1);
+        int totalRibbon = 0;
+        for(String content : fileContent) {
+            String[] lwh = content.split("x", -1);
 
-        int length = Integer.parseInt(lwh[0]);
-        int width = Integer.parseInt(lwh[1]);
-        int height = Integer.parseInt(lwh[2]);
+            int length = Integer.parseInt(lwh[0]);
+            int width = Integer.parseInt(lwh[1]);
+            int height = Integer.parseInt(lwh[2]);
 
-        int smallestFace = getSmallestFace(length, width, height);
+            int smallestFace = getSmallestFace(length, width, height);
 
-        int totalRibbon = (length * width * height) + smallestFace;
+            totalRibbon = totalRibbon + (length * width * height) + smallestFace;
+        }
         return totalRibbon;
     }
 

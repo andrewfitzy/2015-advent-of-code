@@ -2,19 +2,20 @@
 package io.github.andrewfitzy.day_03;
 
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 public class Task01 {
 
-    private final String input;
+    private final List<String> fileContent;
 
-    public Task01(final String input) {
-        this.input = input;
+    public Task01(final List<String> fileContent) {
+        this.fileContent = fileContent;
     }
 
     public int solve() {
         Set<String> visitedSet = new HashSet<String>();
-        char[] chars = input.toCharArray();
+        char[] chars = fileContent.get(0).toCharArray();
         int row = 0;
         int col = 0;
 

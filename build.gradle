@@ -1,6 +1,8 @@
 plugins {
     id 'java'
     id 'com.diffplug.spotless' version '6.12.0'
+    id 'jacoco'
+    id 'pmd'
 }
 
 group 'io.github.andrewfitzy'
@@ -11,12 +13,21 @@ repositories {
 }
 
 dependencies {
+    implementation 'org.slf4j:slf4j-api:2.0.9'
+    testImplementation 'org.slf4j:slf4j-simple:2.0.9'
     testImplementation 'org.junit.jupiter:junit-jupiter:5.8.1'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
 }
 
 test {
     useJUnitPlatform()
+    finalizedBy jacocoTestReport // report is always generated after tests run
+    testLogging.showStandardStreams = true
+    testLogging.exceptionFormat = 'full'
+}
+
+jacocoTestReport {
+    dependsOn test // tests are required to run before generating the report
 }
 
 spotless {
@@ -26,4 +37,8 @@ spotless {
         // make sure every file has the following copyright header.
         licenseHeader '/* (C)$YEAR */'
     }
+}
+
+pmd {
+    toolVersion = "6.21.0"
 }

@@ -2,7 +2,6 @@ plugins {
     id 'java'
     id 'com.diffplug.spotless' version '6.12.0'
     id 'jacoco'
-    id 'pmd'
 }
 
 group 'io.github.andrewfitzy'
@@ -37,8 +36,4 @@ spotless {
         // make sure every file has the following copyright header.
         licenseHeader '/* (C)$YEAR */'
     }
-}
-
-pmd {
-    toolVersion = "6.21.0"
 }

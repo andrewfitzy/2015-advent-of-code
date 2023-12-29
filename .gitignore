@@ -27,3 +27,6 @@ hs_err_pid*
 
 # Ignore mac files
 .DS_Store
+
+# Ignore any test input files in resources
+/src/test/resources/*/task01_input.txt

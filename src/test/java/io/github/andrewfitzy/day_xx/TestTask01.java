@@ -20,7 +20,7 @@ public class TestTask01 {
     }
 
     @Test
-    void demoTestMethod_02() {
+    void testSolveWithRealData() {
         List<String> fileContent = TaskInputReader.getFileContent("./day_xx/task01_input.txt");
 
         Task01 task01 = new Task01(fileContent);

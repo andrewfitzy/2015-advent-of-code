@@ -1,14 +1,13 @@
 /* (C)2022 */
 package io.github.andrewfitzy.day_05;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class Task01 {
     final Logger logger = LoggerFactory.getLogger(Task01.class);
@@ -20,16 +19,16 @@ public class Task01 {
 
     public int solve() {
         int validInput = 0;
-        for(String input : fileContent) {
-            if(!hasValidVowels(input)) {
+        for (String input : fileContent) {
+            if (!hasValidVowels(input)) {
                 logger.info("Vowels check fails: {}", input);
                 continue;
             }
-            if(!containsDoubleLetter(input)) {
+            if (!containsDoubleLetter(input)) {
                 logger.info("Double letter check fails: {}", input);
                 continue;
             }
-            if(containsDisallowedString(input)) {
+            if (containsDisallowedString(input)) {
                 logger.info("Disallowed String check fails: {}", input);
                 continue;
             }
@@ -46,8 +45,8 @@ public class Task01 {
         vowels.add('o');
         vowels.add('u');
         int vowelCount = 0;
-        for(char letter : input.toCharArray()) {
-            if(vowels.contains(letter)) {
+        for (char letter : input.toCharArray()) {
+            if (vowels.contains(letter)) {
                 vowelCount++;
             }
         }
@@ -55,8 +54,8 @@ public class Task01 {
     }
 
     private boolean containsDoubleLetter(String input) {
-        for(int i = 1;i < input.length();i++) {
-            if(input.charAt(i-1) == input.charAt(i)) {
+        for (int i = 1; i < input.length(); i++) {
+            if (input.charAt(i - 1) == input.charAt(i)) {
                 return true;
             }
         }

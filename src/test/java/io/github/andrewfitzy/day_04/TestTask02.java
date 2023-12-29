@@ -29,7 +29,7 @@ public class TestTask02 {
         assertEquals(5714438, result);
     }
 
-    //@Test
+    // @Test
     void testSolveWithRealData() throws NoSuchAlgorithmException {
         List<String> fileContent = TaskInputReader.getFileContent("./day_04/task01_input.txt");
 

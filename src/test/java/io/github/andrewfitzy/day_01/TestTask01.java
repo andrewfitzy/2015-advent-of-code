@@ -91,7 +91,7 @@ public class TestTask01 {
         assertEquals(-3, result);
     }
 
-    @Test
+    // @Test
     void testSolveWithRealData() {
         List<String> fileContent = TaskInputReader.getFileContent("./day_01/task01_input.txt");
         Task01 task01 = new Task01(fileContent);

@@ -10,7 +10,7 @@ public class Task02 {
     private final List<String> fileContent;
 
     public Task02(final List<String> fileContent) {
-        this.fileContent = fileContent;
+        this.fileContent = fileContent.stream().toList();
     }
 
     public int solve() {
@@ -75,6 +75,6 @@ public class Task02 {
                 highestConsecutiveCount = consecutiveCount;
             }
         }
-        return highestConsecutiveCount > 2 && highestConsecutiveCount % 2 == 1;
+        return highestConsecutiveCount > 2 && highestConsecutiveCount % 2 != 0;
     }
 }

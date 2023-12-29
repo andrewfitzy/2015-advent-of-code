@@ -1,18 +1,16 @@
 /* (C)2022 */
 package io.github.andrewfitzy.day_04;
 
+import java.nio.charset.Charset;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.List;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 public class Task01 {
-    final Logger logger = LoggerFactory.getLogger(Task01.class);
     private final List<String> fileContent;
 
     public Task01(final List<String> fileContent) {
-        this.fileContent = fileContent;
+        this.fileContent = fileContent.stream().toList();
     }
 
     public int solve() throws NoSuchAlgorithmException {
@@ -21,17 +19,16 @@ public class Task01 {
         for (int i = 0; i < 5000000; i++) {
 
             String test = fileContent.get(0) + String.format("%04d", i);
-            md.update(test.getBytes());
+            md.update(test.getBytes(Charset.defaultCharset()));
             byte[] digest = md.digest();
 
-            StringBuffer stringBuffer = new StringBuffer();
-            for (int j = 0; j < digest.length; j++) {
-                stringBuffer.append(
-                        Integer.toString((digest[j] & 0xff) + 0x100, 16).substring(1));
+            StringBuilder stringBuilder = new StringBuilder();
+            for (byte b : digest) {
+                stringBuilder.append(Integer.toString((b & 0xff) + 0x100, 16).substring(1));
             }
             boolean startsWith0s = Boolean.TRUE;
             for (int j = 0; j < 5; j++) {
-                if (!Character.valueOf(stringBuffer.charAt(j)).equals('0')) {
+                if (!Character.valueOf(stringBuilder.charAt(j)).equals('0')) {
                     startsWith0s = Boolean.FALSE;
                     break;
                 }

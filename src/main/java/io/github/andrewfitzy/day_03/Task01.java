@@ -10,7 +10,7 @@ public class Task01 {
     private final List<String> fileContent;
 
     public Task01(final List<String> fileContent) {
-        this.fileContent = fileContent;
+        this.fileContent = fileContent.stream().toList();
     }
 
     public int solve() {

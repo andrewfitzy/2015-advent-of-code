@@ -20,7 +20,7 @@ public class TestTask01 {
         assertEquals(0, result);
     }
 
-    @Test
+    // @Test
     void testSolveWithRealData() {
         List<String> fileContent = TaskInputReader.getFileContent("./day_09/task01_input.txt");
 

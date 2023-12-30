@@ -1,5 +1,5 @@
 /* (C)2023 */
-package io.github.andrewfitzy.day_09;
+package io.github.andrewfitzy.day_12;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -12,17 +12,16 @@ public class TestTask02 {
 
     @Test
     void demoTestMethod_01() {
-        Task01 task02 = new Task01(
-                Arrays.asList("London to Dublin = 464" + "London to Belfast = 518" + "Dublin to Belfast = 141"));
+        Task02 task02 = new Task02(Arrays.asList(""));
 
         int result = task02.solve();
 
         assertEquals(0, result);
     }
 
-    // @Test
+    @Test
     void testSolveWithRealData() {
-        List<String> fileContent = TaskInputReader.getFileContent("./day_09/task01_input.txt");
+        List<String> fileContent = TaskInputReader.getFileContent("./day_12/task01_input.txt");
 
         Task02 task02 = new Task02(fileContent);
         int result = task02.solve();

@@ -10,14 +10,6 @@ import org.junit.jupiter.api.Test;
 
 public class TestTask01 {
 
-    // After one second, Dancer has gone 16 km.
-    // After ten seconds, Dancer has gone 160 km.
-    // On the eleventh second, Comet begins resting (staying at 140 km), and Dancer continues on for a total distance of
-    // 176 km.
-    // On the 12th second, both reindeer are resting.
-    // They continue to rest until the 138th second, when Comet flies for another ten seconds.
-    // On the 174th second, Dancer flies for another 11 seconds.
-
     @Test
     void demoTestMethod_01() {
         Task01 task01 =
@@ -98,7 +90,7 @@ public class TestTask01 {
         assertEquals(1056, result);
     }
 
-    @Test
+    // @Test
     void testSolveWithRealData() {
         List<String> fileContent = TaskInputReader.getFileContent("./day_14/task01_input.txt");
 

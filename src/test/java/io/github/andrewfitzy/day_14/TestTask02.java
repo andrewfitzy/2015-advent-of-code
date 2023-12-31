@@ -1,5 +1,5 @@
 /* (C)2023 */
-package io.github.andrewfitzy.day_xx;
+package io.github.andrewfitzy.day_14;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -21,7 +21,7 @@ public class TestTask02 {
 
     // @Test
     void testSolveWithRealData() {
-        List<String> fileContent = TaskInputReader.getFileContent("./day_xx/task01_input.txt");
+        List<String> fileContent = TaskInputReader.getFileContent("./day_14/task01_input.txt");
 
         Task02 task02 = new Task02(fileContent);
         int result = task02.solve();

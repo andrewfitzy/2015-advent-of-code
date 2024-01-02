@@ -1,10 +1,7 @@
 /* (C)2023 */
 package io.github.andrewfitzy.day_16;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public final class Task02 {
 
@@ -41,7 +38,7 @@ public final class Task02 {
             boolean allCriteriaMatch = true;
             for (Map.Entry<String, Integer> criterion : criteria.entrySet()) {
                 Integer attrbuteValue = sue.get(criterion.getKey());
-                if (attrbuteValue != null && !attributeValueWithinRange(attrbuteValue, criterion)) {
+                if (!Objects.isNull(attrbuteValue) && !attributeValueWithinRange(attrbuteValue, criterion)) {
                     allCriteriaMatch = false;
                     break;
                 }
@@ -60,7 +57,7 @@ public final class Task02 {
         if ("pomeranians".equals(criterion.getKey()) || "goldfish".equals(criterion.getKey())) {
             return attrbuteValue < criterion.getValue();
         }
-        return attrbuteValue == criterion.getValue();
+        return attrbuteValue.equals(criterion.getValue());
     }
 
     private Map<String, Integer> getSue(String input) {

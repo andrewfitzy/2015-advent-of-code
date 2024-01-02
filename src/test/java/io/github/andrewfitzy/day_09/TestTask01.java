@@ -13,11 +13,11 @@ public class TestTask01 {
     @Test
     void demoTestMethod_01() {
         Task01 task01 = new Task01(
-                Arrays.asList("London to Dublin = 464" + "London to Belfast = 518" + "Dublin to Belfast = 141"));
+                Arrays.asList("London to Dublin = 464", "London to Belfast = 518", "Dublin to Belfast = 141"));
 
         int result = task01.solve();
 
-        assertEquals(0, result);
+        assertEquals(605, result);
     }
 
     // @Test
@@ -27,6 +27,6 @@ public class TestTask01 {
         Task01 task01 = new Task01(fileContent);
         int result = task01.solve();
 
-        assertEquals(0, result);
+        assertEquals(141, result);
     }
 }

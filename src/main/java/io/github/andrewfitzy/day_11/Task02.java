@@ -7,7 +7,7 @@ import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class Task02 {
+public final class Task02 {
 
     private final List<String> fileContent;
 

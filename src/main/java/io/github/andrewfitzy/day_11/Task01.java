@@ -7,7 +7,7 @@ import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class Task01 {
+public final class Task01 {
 
     public static final int ASCII_LOWER_Z = 122;
     public static final int ASCII_LOWER_A = 97;

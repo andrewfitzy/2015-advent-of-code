@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class Task01 {
+public final class Task01 {
     public final Pattern NUMBER_PATTERN = Pattern.compile("-?\\d+");
     private final List<String> fileContent;
 

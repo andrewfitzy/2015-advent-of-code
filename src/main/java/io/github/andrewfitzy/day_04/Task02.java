@@ -6,7 +6,7 @@ import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.List;
 
-public class Task02 {
+public final class Task02 {
 
     private final List<String> fileContent;
 

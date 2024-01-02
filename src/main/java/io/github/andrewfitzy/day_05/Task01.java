@@ -9,7 +9,7 @@ import java.util.regex.Pattern;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-public class Task01 {
+public final class Task01 {
     final Logger logger = LoggerFactory.getLogger(Task01.class);
     private final List<String> fileContent;
 

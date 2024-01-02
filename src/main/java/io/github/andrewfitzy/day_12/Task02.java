@@ -3,7 +3,7 @@ package io.github.andrewfitzy.day_12;
 
 import java.util.List;
 
-public class Task02 {
+public final class Task02 {
 
     private final List<String> fileContent;
 

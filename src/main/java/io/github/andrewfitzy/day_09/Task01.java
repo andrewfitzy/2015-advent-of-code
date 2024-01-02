@@ -3,7 +3,7 @@ package io.github.andrewfitzy.day_09;
 
 import java.util.*;
 
-public class Task01 {
+public final class Task01 {
 
     private record Pair(String left, String right) {}
 

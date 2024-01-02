@@ -5,7 +5,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class Task02 {
+public final class Task02 {
 
     private final List<String> fileContent;
 

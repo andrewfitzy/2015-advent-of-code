@@ -5,7 +5,7 @@ import java.util.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-public class Task02 {
+public final class Task02 {
     final Logger logger = LoggerFactory.getLogger(Task02.class);
     private final List<String> fileContent;
 

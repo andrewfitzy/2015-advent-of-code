@@ -24,9 +24,9 @@ public final class Task01 {
             replacementMap.put(parts[0], replacementList);
         }
         for (Map.Entry<String, List<String>> entry : replacementMap.entrySet()) {
-            Pattern NUMBER_PATTERN = Pattern.compile("(" + entry.getKey() + ")");
+            Pattern REPLACEMENT_PATTERN = Pattern.compile("(" + entry.getKey() + ")");
 
-            Matcher matcher = NUMBER_PATTERN.matcher(molecule);
+            Matcher matcher = REPLACEMENT_PATTERN.matcher(molecule);
             while (matcher.find()) {
                 int start = matcher.start();
                 int end = matcher.end();

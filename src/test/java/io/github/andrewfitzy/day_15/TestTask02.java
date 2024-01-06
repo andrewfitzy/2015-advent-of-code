@@ -12,11 +12,13 @@ public class TestTask02 {
 
     @Test
     void demoTestMethod_01() {
-        Task02 task02 = new Task02(Arrays.asList(""));
+        Task02 task02 = new Task02(Arrays.asList(
+                "Butterscotch: capacity -1, durability -2, flavor 6, texture 3, calories 8",
+                "Cinnamon: capacity 2, durability 3, flavor -2, texture -1, calories 3"));
 
         int result = task02.solve();
 
-        assertEquals(0, result);
+        assertEquals(57600000, result);
     }
 
     // @Test
@@ -26,6 +28,6 @@ public class TestTask02 {
         Task02 task02 = new Task02(fileContent);
         int result = task02.solve();
 
-        assertEquals(0, result);
+        assertEquals(15862900, result);
     }
 }

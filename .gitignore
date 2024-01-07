@@ -24,6 +24,7 @@ hs_err_pid*
 /.gradle/
 /build/
 /.idea/
+*.hprof
 
 # Ignore mac files
 .DS_Store

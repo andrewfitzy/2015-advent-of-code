@@ -32,19 +32,19 @@ public final class Task01 {
 
     private List<List<Integer>> buildCombinations(List<Integer> containers) {
         List<List<Integer>> combinations = new ArrayList<>();
-        powerSetInternal(containers, combinations, new ArrayList<>(), 0);
+        buildCombinationsRecursively(containers, combinations, new ArrayList<>(), 0);
         return combinations;
     }
 
-    private void powerSetInternal(
+    private void buildCombinationsRecursively(
             List<Integer> set, List<List<Integer>> combinations, List<Integer> currentCombination, int index) {
         if (index == set.size()) {
             combinations.add(new ArrayList<>(currentCombination));
         } else {
             currentCombination.add(set.get(index));
-            powerSetInternal(set, combinations, currentCombination, index + 1);
+            buildCombinationsRecursively(set, combinations, currentCombination, index + 1);
             currentCombination.remove(currentCombination.size() - 1);
-            powerSetInternal(set, combinations, currentCombination, index + 1);
+            buildCombinationsRecursively(set, combinations, currentCombination, index + 1);
         }
     }
 }

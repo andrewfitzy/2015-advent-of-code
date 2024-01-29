@@ -12,6 +12,12 @@ In this year I chose to use the following tools:
 
 All development was completed using IntelliJ which is an awesome development environment. 
 
+## Setup
+There is a small setup script that copies the projects pre-commit file to the `hooks` folder of the project's repo. This needs to be run after the project is cloned only.
+```bash
+$ ./gradlew initProject  
+```
+
 ## Building
 ```bash
 $ ./gradlew build  
@@ -23,15 +29,11 @@ $ ./gradlew check
 ```
 
 ## Committing
-I couldn't get pre-commit to work so there are no automated checks on commit. This means that I've been running the following for each commit...
+The pre-commit hook should kick-in, when it does it will run `spotless` and `spotbugs`
 ```bash
-$ ./gradlew spotlessApply  
-$ ./gradlew spotbugsMain
 $ git add --all
 $ git commit -a
 ```
-With the list of commands above, I've run spotless and spotbugs separately, this is because I didn't want to run the whole test suite before every commit, I have a GitHub actions file setup for this. If I had a pre-commit hook set up, the spotless and spotbugs tasks are the ones that would be run so the result of these actions is not different to if they were automatically triggered.
-
 ## Progress
 |                                                | Challenge                         |                                                          Task 1                                                           |                                                          Task 2                                                           |
 |:-----------------------------------------------|:----------------------------------|:-------------------------------------------------------------------------------------------------------------------------:|:-------------------------------------------------------------------------------------------------------------------------:|
@@ -59,4 +61,4 @@ With the list of commands above, I've run spotless and spotbugs separately, this
 | [Day 22](https://adventofcode.com/2015/day/22) | Wizard Simulator 20XX | [🌟](https://github.com/andrewfitzy/2015-advent-of-code/blob/main/src/main/java/io/github/andrewfitzy/day_22/Task01.java) | [🌟](https://github.com/andrewfitzy/2015-advent-of-code/blob/main/src/main/java/io/github/andrewfitzy/day_22/Task02.java) |
 | [Day 23](https://adventofcode.com/2015/day/23) | Opening the Turing Lock | [🌟](https://github.com/andrewfitzy/2015-advent-of-code/blob/main/src/main/java/io/github/andrewfitzy/day_23/Task01.java) | [🌟](https://github.com/andrewfitzy/2015-advent-of-code/blob/main/src/main/java/io/github/andrewfitzy/day_23/Task02.java) |
 | [Day 24](https://adventofcode.com/2015/day/24) | It Hangs in the Balance | [🌟](https://github.com/andrewfitzy/2015-advent-of-code/blob/main/src/main/java/io/github/andrewfitzy/day_24/Task01.java) | [🌟](https://github.com/andrewfitzy/2015-advent-of-code/blob/main/src/main/java/io/github/andrewfitzy/day_24/Task02.java) |
-| [Day 25](https://adventofcode.com/2015/day/25) | Let It Snow | [🌟](https://github.com/andrewfitzy/2015-advent-of-code/blob/main/src/main/java/io/github/andrewfitzy/day_25/Task01.java) |                                                                                                                           |
+| [Day 25](https://adventofcode.com/2015/day/25) | Let It Snow | [🌟](https://github.com/andrewfitzy/2015-advent-of-code/blob/main/src/main/java/io/github/andrewfitzy/day_25/Task01.java) |                                                            🌟                                                             |

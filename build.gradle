@@ -49,3 +49,15 @@ tasks.spotbugsMain {
         setStylesheet("fancy-hist.xsl")
     }
 }
+
+tasks.register("initProject") {
+    group = "Custom"
+    description = "Init task for the project, run this after cloning"
+    doLast {
+        println("... Adding pre-commit hook")
+        exec {
+            commandLine("cp", "./.scripts/pre-commit", "./.git/hooks")
+        }
+        println("✅ Added Pre-commit Git Hook Script.")
+    }
+}

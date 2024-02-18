@@ -1,7 +1,7 @@
-![example workflow](https://github.com/andrewfitzy/2015-advent-of-code/actions/workflows/build_and_test.yml/badge.svg)
+![build_and_test badge](https://github.com/andrewfitzy/2015-advent-of-code/actions/workflows/build_and_test.yml/badge.svg)
 # 2015-advent-of-code
 
-This repo contains the solutions for my path of Advent of Code 2015. I complete AoC to get familiar with a technology, its build tools and testing tools, it's kind of a mini-production type workflow I follow.
+This repo contains the solutions for my path of [Advent of Code 2015](https://adventofcode.com/2015). I complete AoC to get familiar with a technology, its build tools and testing tools, it's kind of a mini-production type workflow I follow.
 
 In this year I chose to use the following tools:
 - [Java v19.0.1](https://openjdk.org/projects/jdk/19/). I have the OpenJDK version of the JDK on my machine so this is the version I have used. I know there are other versions available but in theory they are all interchangeable, right... right? 
